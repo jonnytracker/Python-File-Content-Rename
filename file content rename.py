@@ -1,7 +1,9 @@
 import os
 
 
-os.chdir('E:\Blender\Blend My NFT\Export\Blend_My_NFTs Output\Complete_Collection\Cardano_metaData')
+path = ''
+
+os.chdir(path)
 
 print(os.getcwd())
 
@@ -15,7 +17,7 @@ for file in os.listdir():
     with open(file,"r") as reader:
         data = reader.readlines()
         
-        cleanContent = [ d.replace("HouseLuxury_","HouseLuxury") for d in data ]           
+        cleanContent = [ d.replace("content_","content") for d in data ]           
         print("Content Replace Success")
             
         
